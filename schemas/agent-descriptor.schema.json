@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/Amoradvisory/hermes-mission-control/schemas/agent-descriptor.schema.json",
+  "title": "Hermes Agent Descriptor",
+  "description": "Schema de description d'un agent Hermes pour Mission Control V0",
+  "type": "object",
+  "required": ["id", "name", "version", "role"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[\w\-\.]+$",
+      "description": "Identifiant unique de l'agent (slug, ex: elina-orchestrator)"
+    },
+    "name": {
+      "type": "string",
+      "description": "Nom affiche de l'agent"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\d+\.\d+\.\d+$",
+      "description": "Version semantique (ex: 1.0.0)"
+    },
+    "role": {
+      "type": "string",
+      "description": "Role principal de l'agent (orchestrator, researcher, analyst, etc.)"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description courte de l'agent"
+    },
+    "model": {
+      "type": "string",
+      "description": "Modele LLM utilise par l'agent (ex: claude-opus-4-7)"
+    },
+    "provider": {
+      "type": "string",
+      "description": "Provider LLM (ex: anthropic, openai, mistral)"
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Tags pour filtrage et categorisation"
+    },
+    "capabilities": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Liste des capacites declarees (ex: web_search, code_execution)"
+    },
+    "hermes_config": {
+      "type": "object",
+      "description": "Chemin ou reference vers le profil Hermes de l'agent",
+      "properties": {
+        "profile_dir": {
+          "type": "string",
+          "description": "Chemin relatif vers le dossier profil Hermes"
+        },
+        "soul_file": {
+          "type": "string",
+          "description": "Chemin vers le fichier SOUL.md"
+        }
+      }
+    },
+    "readonly": {
+      "type": "boolean",
+      "default": true,
+      "description": "Si true, Mission Control ne modifie pas cet agent (V0: toujours true)"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "inactive", "draft", "deprecated"],
+      "description": "Statut operationnel de l'agent"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date",
+      "description": "Date de creation (ISO 8601)"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date",
+      "description": "Date de derniere mise a jour (ISO 8601)"
+    }
+  }
+}

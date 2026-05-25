@@ -1,0 +1,43 @@
+# Hermes Mission Control — .gitignore anti-secrets
+
+# Secrets et credentials — JAMAIS commites
+.env
+.env.*
+*.env
+auth.json
+config.yaml
+*.key
+*.pem
+*.p12
+*.pfx
+credentials.json
+token.json
+secrets/
+
+# Profils Hermes — ne jamais inclure
+.hermes/
+profiles/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/

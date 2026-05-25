@@ -1,0 +1,36 @@
+# Exemple de descripteur d'agent -- Elina Orchestrator
+# Conforme au schema schemas/agent-descriptor.schema.json
+# V0 : lecture seule, aucun secret inclus
+
+id: elina-orchestrator
+name: "Elina Omega -- Orchestrator"
+version: "1.0.0"
+role: orchestrator
+description: >
+  Agent orchestrateur principal. Coordonne la flotte d'agents Hermes,
+  delegue les taches specialisees et synthetise les resultats pour Amor.
+
+model: claude-opus-4-7
+provider: anthropic
+
+tags:
+  - orchestrator
+  - flagship
+  - amor
+  - hermes-fleet
+
+capabilities:
+  - task_delegation
+  - multi_agent_coordination
+  - synthesis
+  - strategic_planning
+  - memory_management
+
+hermes_config:
+  profile_dir: "~/.hermes/profiles/elina-orchestrator"
+  soul_file: "~/.hermes/profiles/elina-orchestrator/SOUL.md"
+
+readonly: true
+status: active
+created_at: "2026-05-25"
+updated_at: "2026-05-25"

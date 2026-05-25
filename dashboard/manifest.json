@@ -1,0 +1,25 @@
+{
+  "name": "hermes-mission-control",
+  "version": "0.1.0",
+  "description": "Plugin cockpit pour gerer une flotte d'agents Hermes - V0 lecture seule, non intrusive.",
+  "author": "Amoradvisory",
+  "license": "PRIVATE",
+  "plugin_type": "dashboard",
+  "entry_point": "dashboard/plugin_api.py",
+  "api_base": "http://127.0.0.1:7700",
+  "readonly": true,
+  "dry_run": true,
+  "routes": [
+    { "path": "/health",       "method": "GET", "description": "Statut du plugin" },
+    { "path": "/agents",       "method": "GET", "description": "Liste des profils Hermes detectes" },
+    { "path": "/agents/{id}",  "method": "GET", "description": "Detail d'un profil (config redacted)" },
+    { "path": "/providers",    "method": "GET", "description": "Providers configures (secrets masques)" }
+  ],
+  "redacted_fields": [
+    "api_key", "token", "secret", "password",
+    "cookie", "auth", "credential", "private_key"
+  ],
+  "hermes_compatibility": ">=1.0.0",
+  "phase": 0,
+  "notes": "V0 - Ne modifie aucun fichier Hermes. Ne lance aucun agent. Lecture seule."
+}
