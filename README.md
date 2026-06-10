@@ -4,16 +4,18 @@
 
 ## Description
 
-Hermes Mission Control est une spécification d'architecture pour un système de contrôle de mission. Il s'agit d'une spécification et non d'une application fonctionnelle.
+Spécification d'architecture pour un système de contrôle de mission. Ce dépôt contient les spécifications et l'architecture, mais pas une application exécutable.
 
 ## Contenu du dépôt
 
-Ce dépôt contient les spécifications et les documents d'architecture pour Hermes Mission Control.
+- Spécifications techniques
+- Diagrammes d'architecture
+- Documentation de conception
 
 ## Statut
 
-Ce projet est actuellement en phase de spécification.
+Spécification (pas une application qui tourne)
 
 ## Licence
 
-Ce projet est sous licence MIT.
+MIT
