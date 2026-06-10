@@ -4,7 +4,7 @@
 
 ## Description
 
-Spécification d'architecture pour un système de contrôle de mission. Ce dépôt contient la conception et les spécifications techniques, mais pas une application exécutable.
+Spécification d'architecture pour un système de contrôle de mission. Ce dépôt contient les spécifications et l'architecture, mais pas une application exécutable.
 
 ## Contenu du dépôt
 
@@ -14,8 +14,8 @@ Spécification d'architecture pour un système de contrôle de mission. Ce dép�
 
 ## Statut
 
-Ce projet est actuellement une spécification architecturale. Il n'y a pas d'application fonctionnelle à ce stade.
+Spécification (pas une application qui tourne)
 
 ## Licence
 
-Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
+MIT
